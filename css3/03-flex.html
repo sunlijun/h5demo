@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="div1"></div>
+        <div class="div2"> ssss</div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+    <!-- 伸缩布局 -->
+    <div class="ssbox">
+        <div class="ssdiv1"></div>
+        <div class="ssdiv2"></div>
+        <div class="ssdiv3"></div>
+    </div>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            /* 横向做主轴，竖向做侧轴 */
+            /* 子元素在主轴方向对齐方式 */
+            /* 中心对齐 */
+            justify-content: center;
+            /* 两端对齐 */
+            justify-content: space-between;
+            /* 两端空白，环绕对齐 */
+            justify-content: space-around;
+            /* 主轴方向调整 */
+            /* 默认 */
+            flex-direction: row;
+            /* 竖 */
+            /* flex-direction: column; */
+            /* 垂直反转 */
+            /* flex-direction: column-reverse; */
+            /* 中间显示 */
+            /* align-items: center; */
+            /* 拉伸效果，子元素必须不设置高度 */
+            /* align-items: stretch; */
+            /* 默认子元素没有换行 默认nowrap */
+            flex-wrap: wrap;
+            /* 换行空白问题 相当于重新设置主轴方向*/
+            align-content: flex-start;
+        }
+        
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        
+        .div3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        
+        .div4 {
+            width: 120px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* 伸缩布局 */
+        
+        .ssbox {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+        }
+        
+        .ssdiv1 {
+            flex: 1;
+            background-color: blue;
+        }
+        
+        .ssdiv2 {
+            flex: 1;
+            background-color: pink;
+        }
+        
+        .ssdiv3 {
+            flex: 1;
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+</html>

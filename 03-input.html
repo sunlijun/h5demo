@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 智能表单元素 autocomplete 智能提示，默认on 开启 autocomplete 关闭了验证功能-->
+    <!-- placeholder  reuqired 该属性出现，当前表单元素必须有验证-->
+    <form action="" method="GET" autocomplete="off" novalidate>
+        邮箱： <input type="email" value="" /> <br/> url <input type="url" value="" /> <br/> 数字 <input type="number" value=""> <br> 滑块 <input type="range"> <br> 颜色 <input type="color"> <br> 时间 <input type="time"> <br>
+
+        <input type="submit" id="sm" /> <br>
+
+        <!-- --------------------datalist 使用 需要有自己的id 值，配合list 属性使用 才可以有列表效果-->
+
+        <input type="text" value="" placeholder="请选择浏览器" list="url_list">
+        <datalist id="url_list">
+            <option value="http://www.baidu.com ">百度</option>
+            <option value="http://www.baidu.com ">谷歌</option>
+            <option value="http://www.baidu.com ">雅虎</option>
+        </datalist>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1 关闭窗口前有效 2 当前窗口共享 3 约5M
+        window.sessionStorage.setItem("user_name", "孙立军")
+        window.sessionStorage.setItem("age", "18")
+            // window.sessionStorage.clear();// 清空
+        window.sessionStorage.removeItem("age");
+        var username = window.sessionStorage.getItem("user_name")
+        var age = window.sessionStorage.getItem("age")
+        console.log(username, age);
+    </script>
+
+
+    <script>
+        // 1 永久存储 2 多窗口共享 3 约20M
+        window.localStorage.setItem("zs", "zhangsan")
+        var lc = window.localStorage.getItem("zs")
+        console.log("localstorage---", lc)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <div class="shadow1">shadow -----test </div>
+
+    <style>
+        .shadow1 {
+            width: 300px;
+            height: 20px;
+            border: 3px solid blue;
+            text-shadow: 10px 10px 10px red;
+            /* 水平 ，垂直，模糊度 颜色 */
+        }
+        /* p标签后面所有的ul */
+        
+        p~ul {
+            background-color: #f0f;
+        }
+        /* href属性 ^开头  $ 结尾 判断 */
+        
+        a[href$="#"] {
+            background-color: green;
+        }
+        /* 选中后颜色改变 */
+        
+        .testp::selection {
+            background-color: red;
+        }
+        
+        p::selection {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p> 特殊处理就开始</p>
+
+        <ul>
+            <li> <a href="#">Eadmslsdk</a></li>
+            <li><a href="#">Mxlskdjfks</a></li>
+            <li><a href="#">Esxlksjldkj</a> </li>
+        </ul>
+    </div>
+
+    <div>
+        <p class="testp">chuanqianmingyueguang1</p>
+        <p>chuanqianmingyueguang2</p>
+        <p>chuanqianmingyueguang3</p>
+        <p>chuanqianmingyueguang5</p>
+
+    </div>
+</body>
+
+</html>

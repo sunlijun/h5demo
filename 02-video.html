@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        controls 控制界面
+        auoplay 谷歌视频不好使，muted 可以界面，但是会静音自动播放
+    -->
+    <video src="xxxxx" controls autoplay loop muted></video>
+
+    <!--
+        如何兼容支持MP4
+        如果支持第一个就直接播放第一个mp4 如果支持第二个，播放第二个ogg格式
+    -->
+    <video autoplay controls loop>
+
+        <source src="xx/1.mp4">
+        <source src="xxx/1.ogg" > 
+    </video>
+</body>
+
+</html>

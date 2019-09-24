@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- css 中的选择器使用 -->
+
+    <style>
+        .cls {
+            height: 20px;
+            font-size: 20px;
+            /* color: red; */
+        }
+        
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+
+    <div>
+        <p>这是测试的文本内容1</p>
+        <p>这是测试的文本内容2</p>
+        <p>这是测试的文本内容3</p>
+    </div>
+    <div class="cls"> 类的样式 </div>
+    <div class="cls"> 类的样式 </div>
+    <br><br><br>
+    <div>
+        <input type="button" value="添加类样式" id="btn1" />
+        <input type="button" value="移除" id="btn2" />
+        <input type="button" value="切换" id="btn3" />
+        <input type="button" value="是否包含" id="btn4" />
+        <div id="dv" class="test"> </div>
+
+    </div>
+    <!-- // 获取第一个选择器 // document.querySelector("选择器 div p ") 
+    // 获取所有  pobj[i].style.backgroundColor="green" } 
+     // 获取类样式 // document.getElementsByClassName( "cls") 
+    -->
+
+
+    <script>
+        var pobj = document.querySelectorAll("div p")
+        console.log(pobj)
+        for (var i = 0; i < pobj.length; i++) {
+            pobj[i].style.backgroundColor = "green"
+        }
+        var pcls = document.getElementsByClassName("cls")
+        console.log(pcls)
+        for (var i = 0; i < pcls.length; i++) {
+            pcls[i].style.color = "blue"
+        }
+
+        function my$(id) {
+            return document.getElementById(id);
+        }
+
+        my$("btn1").onclick = function() {
+            my$("dv").classList.add("test");
+        }
+
+        my$("btn2").onclick = function() {
+            my$("dv").classList.remove("test");
+        }
+
+        my$("btn3").onclick = () => {
+            my$("dv").classList.toggle("test");
+        }
+
+        my$("btn4").onclick = () => {
+            var res = my$("dv").classList.contains("test");
+            console.log(res)
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <dir id="dv" data-name="sunlijun" data-user-name="孙立军" data-age="18"></dir>
+
+    <script>
+        // 获取值
+        var dt = document.querySelector("#dv").dataset;
+        console.log(dt.name)
+        console.log(dt["age"])
+        console.log(dt.userName)
+            // 赋值
+        dt.abc = "abc"
+        dt.userName = "zhangsan"
+    </script>
+</body>
+
+</html>
